@@ -1,0 +1,8 @@
+<div class="boxes">
+    @for(a of gameList; track a.name){
+        <div class="box" (click)="selectGame(a.name)">
+            <span><img src={{a.thumb}} alt=""></span>
+            <span>{{a.name}}</span>
+        </div>
+    }
+</div>

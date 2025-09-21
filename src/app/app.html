@@ -1,0 +1,11 @@
+<app-navbar [user]="runGame"></app-navbar>
+
+@if(gameSelection){
+    <app-blocks (selectedGame)="loadGame($event)"></app-blocks>
+}
+@else{
+    <div class="playArea">
+        <button class="exit" (click)="selectionStart()">Exit</button>
+        <app-game-panel [gameStart]="runGame"></app-game-panel>
+    </div>
+}

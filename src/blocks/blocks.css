@@ -1,0 +1,32 @@
+.boxes{
+    border:2px solid purple;
+    margin:2%;
+    padding:1%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.box{
+    border:2px solid white;
+    box-shadow: 8px 5px 15px 5px black;
+    background-color: black;
+    color:white;
+    box-sizing: border-box;
+    margin:1%;
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box:hover{
+    box-shadow: unset;
+}
+
+.box img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.box span{
+    font-size:2em;
+}

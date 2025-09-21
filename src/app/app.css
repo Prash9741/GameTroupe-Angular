@@ -1,0 +1,15 @@
+.playArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.exit{
+    place-self: flex-end;
+    width:10%;
+    font-weight: bolder;
+    margin:3px 10px;
+    background-color: white;
+}
+.exit:hover{
+    color:red;
+}
