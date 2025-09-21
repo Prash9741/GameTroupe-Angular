@@ -108,7 +108,7 @@ export class Game{
       case STATE.StartScreen:text="Press 'N' to start";break;
       case STATE.Pause:text="Pause";break;
       case STATE.GameOver:text="Game Over";break;
-      case STATE.Loading:text="Ballon Shooter is Loading....";break;
+      case STATE.Loading:text="Space Escape is Loading....";break;
     }
     ctx.fillStyle="Red";
     ctx.font=50*this.size+"px Arial";
@@ -155,4 +155,5 @@ class Control{//control input from here
     }) ;
   }
 }
+
 
