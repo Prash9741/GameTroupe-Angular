@@ -1,6 +1,6 @@
 export class Background{
     game:any;shot:any;
-    x:number;y:number;size:number=0;speed:number;height:number=0;width:number=0;quantity:number=1;
+    x:number;y:number;size:number=0;speed:number;minSpeed:number;height:number=0;width:number=0;quantity:number=1;
     image:any;dir
     :boolean;
     constructor(game:any){
@@ -9,6 +9,7 @@ export class Background{
         this.x=0;
         this.y=0;
         this.speed=.2;
+        this.minSpeed=5;
         this.dir=false;
         this.position();
     }
@@ -34,7 +35,7 @@ export class Background{
     }
     baseLine(ctx:any){
         ctx.beginPath();
-        ctx.strokeStyle="White";
+        ctx.strokeStyle="Black";
         ctx.moveTo(0,this.game.height-this.game.size*30);
         ctx.lineTo(this.game.width,this.game.height-this.game.size*30);
         ctx.stroke();
@@ -46,12 +47,12 @@ export class Background{
     }
     printScore(ctx:any ,text:string){
         let margin=5*this.game.size;
-        this.setFontDefination(ctx,"White","Times New Roman",30);
+        this.setFontDefination(ctx,"black","Times New Roman",30);
         ctx.fillText(text,margin,this.game.height-margin);
     }
     printLife(ctx:any ,text:string){
         let margin=5*this.game.size;
-        this.setFontDefination(ctx,"White","Arial",30);
+        this.setFontDefination(ctx,"Black","Arial",30);
         let x =ctx.measureText(text).width;
         ctx.fillText(text,this.game.width-x-margin,this.game.height-margin);
     }

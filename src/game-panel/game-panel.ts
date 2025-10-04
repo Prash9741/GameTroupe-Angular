@@ -3,7 +3,7 @@ import { Game as BallonShooter} from './BallonShooter/BallonShooter';
 import { Game as DogRunner} from './DogRunner/DogRunner';
 import { Game as SpaceEscape} from './SpaceEscape/SpaceEscape';
 import { Game as Puzzle} from './Puzzle/Puzzle';
-import { publish } from '../../node_modules/rxjs/dist/types/index';
+import { Game as EscapePod} from './EscapePod/EscapePod';
 
 @Component({
   selector: 'app-game-panel',
@@ -33,8 +33,11 @@ export class GamePanel implements AfterViewInit {
       case "Dog Runner":
         this.Anime.start(DogRunner);
         break;
-      default:
-        this.Anime.start(DogRunner); 
+      case "Escape Pod":
+        this.Anime.start(EscapePod); 
+        break;
+      // default:
+      //   this.Anime.start(EscapePod); 
     }
   }
   ngOnDestroy():void{ //after componenet destroyed
